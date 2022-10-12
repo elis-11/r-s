@@ -8,6 +8,7 @@ export const Home = () => {
   const debounced = useDebounce(search);
   const { isLoading, isError, data } = useSearchUsersQuery(debounced, {
     skip: debounced.length < 3,
+    refetchOnFocus: true    //auto refresh / request
   });
 
   useEffect(() => {
