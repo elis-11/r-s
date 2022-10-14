@@ -53,9 +53,11 @@ export const Home = () => {
                 {user.login}
               </li>
             ))}
-      <div className="container">
-        {areReposLoading && <p className="text-center">Repos are loading...</p>}
-      </div>
+            <div className="container">
+              {areReposLoading && (
+                <p className="text-center">Repos are loading...</p>
+              )}
+            </div>
           </ul>
         )}
       </div>
